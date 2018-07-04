@@ -56,7 +56,7 @@ class XPS:
 			XPS.__sockets[socketId] = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 			XPS.__sockets[socketId].connect((IP, port))
 			XPS.__sockets[socketId].settimeout(timeOut)
-			XPS.__sockets[socketId].setblocking(1)
+			XPS.__sockets[socketId].setblocking(0)
 		except socket.error:
 			return -1
 
